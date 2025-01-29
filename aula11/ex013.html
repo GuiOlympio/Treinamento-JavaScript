@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            font: normal 17pt arial;
+        }
+    </style>
+</head>
+<body>
+    <h1>Nacionalidades</h1> <!-- Título da página -->
+    Seu país de origem: <input type="text" name="txtp" id="txtp"> <!-- Campo para o usuário digitar o país -->
+    <input type="button" value="verificar" onclick="verificar()"> <!-- Botão que chama a função "verificar" ao ser clicado -->
+    <div id="pais"></div> <!-- Div onde o resultado será exibido -->
+    
+    <script>
+        function verificar() {
+            var cxt = window.document.getElementById('txtp'); // (Linha 7) Seleciona o campo onde o usuário digitou o país
+            var res = window.document.getElementById('pais'); // (Linha 8) Seleciona a div onde o resultado será mostrado
+    
+            var vef = cxt.value; // (Linha 10) Armazena o valor digitado pelo usuário na variável "vef"
+            res.innerHTML = `<p>Seu país de origem é ${cxt.value}</p>`; // (Linha 11) Exibe o país digitado pelo usuário na div
+    
+            // (Linha 12-16) Verifica se o país digitado é "Brasil"
+            if (vef == 'Brasil') { 
+                res.innerHTML += `<p>Você é <strong>Brasileiro</strong></p>`; // (Linha 13) Exibe que o usuário é Brasileiro
+            } else { 
+                res.innerHTML += `<p>Você é <strong>Estrangeiro</strong></p>`; // (Linha 15) Exibe que o usuário é Estrangeiro
+            }
+        }
+    </script>
+    
+    </script>
+</body>
+</html>
+
+
+

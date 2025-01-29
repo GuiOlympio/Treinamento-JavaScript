@@ -1,0 +1,42 @@
+body {
+    background: rgba(60, 116, 186, 0.77); 
+    /* Define uma cor de fundo azulada com transparência */
+    font: normal 15pt arial; 
+    /* Define a fonte padrão do corpo da página como Arial, tamanho 15pt */
+}
+
+header {
+    color: white; 
+    /* Define a cor do texto no cabeçalho como branca */
+    text-align: center; 
+    /* Centraliza o texto no cabeçalho */
+}
+
+section {
+    background: white; 
+    /* Define o fundo da seção como branco */
+    border-radius: 10px; 
+    /* Adiciona cantos arredondados com raio de 10px */
+    padding: 15px; 
+    /* Adiciona um espaço interno de 15px dentro da seção */
+    width: 500px; 
+    /* Define a largura da seção como 500px */
+    margin: auto; 
+    /* Centraliza horizontalmente a seção na página */
+    box-shadow: 5px 5px 10px rgba(40, 39, 39, 0.619); 
+    /* Adiciona uma sombra leve à seção com efeito 3D */
+}
+
+div {
+    text-align: center; 
+    /* Centraliza o texto dentro das divs */
+    padding: 10px; 
+    /* Adiciona um espaço interno de 10px em torno do conteúdo da div */
+}
+
+footer {
+    color: white; 
+    /* Define a cor do texto no rodapé como branca */
+    text-align: center; 
+    /* Centraliza o texto no rodapé */
+}

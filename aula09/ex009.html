@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <!-- Definindo o tipo de caractere e as configurações da página -->
+    <meta charset="UTF-8"> <!-- Define o conjunto de caracteres para o site -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Ajusta a visualização em dispositivos móveis -->
+    <title>Primeiros passos com DOM</title> <!-- Título da página -->
+    <style>
+        /* Estilo do corpo da página */
+        body{
+            background-color: rgb(176, 192, 72); /* Cor de fundo */
+            color: white; /* Cor do texto */
+            font: normal 17pt arial; /* Fonte do texto */
+        }
+    </style>
+</head>
+<body>
+    <h1>Iniciando aulas com DOM</h1> <!-- Título principal da página -->
+    <p>Aqui vai o resultado</p> <!-- Parágrafo simples -->
+    <p>Aprendendo a usar <strong>DOM</strong> em JavaScript.</p> <!-- Parágrafo com um texto em negrito -->
+    <div id="msg">Clique em mim</div> <!-- Um div com o texto 'Clique em mim' -->
+    <br\> <!-- Quebra de linha -->
+
+    <script>
+        // Exibe o texto "Olá Mundo!" na página
+        window.document.write("Olá Mundo!<br><hr>");
+
+        // Exibe o charset (conjunto de caracteres) da página
+        window.document.write(window.document.charset);
+        window.document.write(" <= window.document.Charset<br><hr>");
+
+        // Exibe o nome do navegador
+        window.document.write(window.navigator.appName);
+        window.document.write(" <= window.navigator.appName<br><hr>");
+
+        // Exibe a URL da página
+        window.document.write(window.document.URL);
+        window.document.write(" <= window.document.URL<br><hr>");
+
+        // Pega o primeiro parágrafo da página e mostra o que está escrito nele
+        var p1 = window.document.getElementsByTagName('p')[0];
+        window.document.write("Está escrito: ", p1.innerText); // Mostra o conteúdo do primeiro parágrafo
+
+        // Adiciona uma linha horizontal
+        var linha = window.document.write("<hr>");
+
+        // Muda o fundo do primeiro parágrafo para rosa
+        p1.style.background = 'pink';
+
+        // Altera o conteúdo e o estilo do div com id 'msg'
+        var d = window.document.getElementById("msg"); // Pega o div com id 'msg'
+        d.style.color = "black"; // Muda a cor do texto para preto
+        d.innerText = "Processando"; // Altera o texto do div para "Processando"
+
+        // Altera o fundo do div 'msg' para marrom
+        var d = window.document.querySelector('div#msg'); // Seleciona o div novamente
+        d.style.background = "brown"; // Muda o fundo para marrom
+
+    </script>
+</body>
+</html>
+<!--
+    Observações para melhorar seus estudos de JavaScript:
+
+    1. **Compreensão de `document.write`**:
+        - O `document.write` é uma função que escreve diretamente no documento da página. 
+        - **Evite usá-lo em páginas em produção**, pois pode sobrescrever o conteúdo e causar problemas. 
+        - Ao invés de usar `document.write`, prefira métodos modernos como `innerHTML` ou `textContent` para manipular o conteúdo da página.
+
+    2. **Manipulação de Estilos**:
+        - Para modificar o estilo de um elemento (como a cor de fundo ou texto), você pode usar a propriedade `style` no JavaScript, como foi feito com `p1.style.background`.
+        - Isso é muito útil para criar interatividade em páginas web, como mudar o fundo de um parágrafo quando ele é clicado.
+
+    3. **Atenção ao Uso de `getElementById` e `querySelector`**:
+        - **`getElementById("id")`**: Busca um elemento específico pelo seu ID. Se o ID for único na página, é a melhor escolha para selecionar um elemento.
+        - **`querySelector('css-selector')`**: Pode ser mais flexível, pois permite usar seletores CSS para buscar elementos, como `div#msg`. Ele retorna o primeiro elemento que corresponde ao seletor fornecido.
+
+    4. **O que é o DOM (Document Object Model)**:
+        - O DOM é uma representação da estrutura da página em forma de objetos. Isso significa que, em JavaScript, você pode acessar, modificar e interagir com qualquer parte do seu HTML de maneira programática.
+        - Ao aprender sobre o DOM, você pode criar páginas interativas, modificar elementos, alterar textos e até mesmo adicionar novos elementos com facilidade.
+
+    5. **Melhorando a Leitura de Código**:
+        - No seu código, você usou `window.document`, mas é mais comum escrever apenas `document` no JavaScript, porque o objeto `window` é o contexto global e o `document` já é uma propriedade dele.
+        - Prefira usar nomes de variáveis mais descritivos para facilitar a leitura e manutenção do código no futuro.
+
+    6. **Evitar Redefinição de Variáveis**:
+        - No seu código, você usou a variável `d` duas vezes, para diferentes seletores. Tente usar nomes diferentes para evitar confusão e tornar o código mais claro.
+        - Exemplo: `var msgDiv = document.getElementById("msg");`
+
+    7. **Referências**:
+        - Continue praticando a manipulação do DOM e experimentando com os métodos e propriedades que o JavaScript oferece.
+        - Consulte a documentação do MDN (Mozilla Developer Network) para aprender mais sobre os métodos de manipulação do DOM: https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model
+
+    8. **Próximos Passos**:
+        - Ao aprender mais sobre JavaScript, comece a experimentar com eventos de interação, como cliques e alterações no DOM.
+        - Por exemplo, tente alterar o conteúdo de um elemento quando ele for clicado, ou manipule o texto de um parágrafo dinamicamente, com base na entrada do usuário.
+
+    Continue praticando e explorando! O JavaScript tem muita flexibilidade e oferece muitas possibilidades para você construir páginas interativas e dinâmicas.
+-->
